@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Javascript</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+	<!-- contoh-->
+	<p id="demo"></p>
+	<script>
+		document.getElementById('demo').innerHTML = "Supi Adawiah";
+	</script>
+
+
+
+	<!--contoh-->
+	<p id="demojumlah"></p>
+	<script>
+		var x, y;
+		x = 50 + 5;
+		y = x * 10;
+		document.getElementById("demojumlah").innerHTML = y;
+	</script>
+
+	<!-- contoh-->
+	<h1>Contoh</h1>
+	<h2>Oprator JavaScript</h2>
+	<p>Adding a number and a string, returns a string.</p>
+	<p id="Oprator"></p>
+	<script>
+		var x = 10 + 5;
+		var y = "10" + 10;
+		var z = "Desain web" + 100;
+		var q = "Desain web" + "Pak Fajar"
+		document.getElementById("Oprator").innerHTML = x + "<br>" + y + "<br>" + z + "<br>" + q;
+	</script>
+
+	<!-- contoh-->
+	<h3>Tipe Data di javascript</h3>
+	<p id="data"></p>
+	<script>
+		/*contoh tipe dinamis*/
+		var x;
+		x = 5;
+		x = "supiadawiah";
+		/*Contoh aray*/
+		var address = ["saya", "tinggal", "Di Tasikmalaya"];
+
+		document.getElementById("data").innerHTML = x + "<br>" + address;
+	</script>
+
+
+	<!-- Fungsi di javascript -->
+
+	<h2>Functions</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua.</p>
+
+	<p id="demo"></p>
+
+	<script>
+		function myFunction(p1, p2) {
+			return p1 * p2;
+		}
+		document.getElementById("demo").innerHTML = myFunction(20, 100);
+	</script>
+
+
+	<!-- Parameter -->
+	<p>Display "Good day!" if the hour is less than 18:00</p>
+	<p id="demo"></p>
+	<script>
+		var d = 12;
+		if (d > 18) {
+			document.getElementById("demo").innerHTML = "Good day!";
+		} else if (d == 0) {
+			document.getElementById("demo").innerHTML = "Not Null!";
+		} else {
+			document.getElementById("demo").innerHTML = "Good Morning";
+		}
+	</script>
+
+
+
+	<!-- Javascript Objeck -->
+
+	<h2>Object</h2>
+	<p id="object"></p>
+	<script>
+		var person = {
+			firstName: "supi",
+			lastName: "adawiah",
+			age: 20,
+			eyeColor: "white"
+		};
+		document.getElementById("object").innerHTML = person.firstName + " " + person.lastName + " berusia " + person.age +
+			" tahun "
+	</script>
+
+
+	<!-- Event -->
+
+	<button onclick="document.getElementById('event').innerHTML=Date()">Waktu</button>
+	<p id="event"></p>
+	<button onclick="this.innerHTML=Date()">Waktu</button>
+	<br><br>
+	<button onclick="myFunction">Test</button>
+
+	<script>
+		function myFunction() {
+			alert("Hello!  I am an alert box!");
+		}
+	</script>
+
+
+	<!-- pengkondisian -->
+
+	<p id="kondisi"></p>
+	<script>
+		var day;
+		switch (new Date().getDay()) {
+			case 0:
+				day = "Hari Minggu";
+				break;
+			case 1:
+				day = "Hari Senin";
+				break;
+			case 2:
+				day = "Hari Selasa";
+				break;
+			case 3:
+				day = "Hari Rabu";
+				break;
+			case 5:
+				day = "Hari Kamis";
+				break;
+			case 6:
+				day = "Hari Jum'at";
+				break;
+			case 7:
+				day = "Hari Sabtu";
+				break;
+		}
+		document.getElementById("kondisi").innerHTML = day;
+	</script>
+
+
+	<!-- Loops -->
+	<h2>Loops</h2>
+	<p id="loops"></p>
+
+	<script>
+		var text = "";
+		var i;
+		for (i = 0; i < 11; i++) {
+			text += "Nomor ke " + i + "<br>";
+		}
+		document.getElementById("loops").innerHTML = text;
+	</script>
+
+
+	<!-- Printah cetak halaman web atau print -->
+	<p>Klik tombol untuk mencetak halaman saat ini</p>
+	<button onclick="myFunction()">Print</button>
+
+	<script>
+		function myFunction() {
+			window.print();
+		}
+	</script>
+
+
+	<!-- Contoh Validasi -->
+	<p>Masukkan Nomor dan klik OK</p>
+
+	<input id="validasi" type="number" min="100" max="300" required>
+	<button onclick="myFunction">Ok</button>
+	<p>Jika jumlahnya kurang dari 100 atau lebih besar dari 400, pesan kesalahan akan ditampilkan.</p>
+	<p id="validasi1"></p>
+
+	<script>
+		function myFunction() {
+			var inpObj = document.getElementById("validasi");
+			if (!inpObj.checkValidity()) {
+				document.getElementById("validasi1").innerHTML = inpObj.validationMessage;
+			} else {
+				document.getElementById("validasi1").innerHTML = "Input OK"
+			}
+		}
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+body {
+	background-color: #fff;
+}
+
+#tasikmalaya {
+	text-align: center;
+	width: 500px;
+	background-color: rgb(244, 244, 244);
+	border-radius: 0 0 3px 3px;
+	margin: auto;
+	padding: 50px;
+}
+
+
+.paragraf {
+	font-family: timesnewroman;
+	font-size: 20px;
+}
+
+.button {
+	text-decoration-style: initial;
+	padding: 20px;
+	text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: black;
+	font-family: arial;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+
+h3 {
+	font-size: 20px;
+}
